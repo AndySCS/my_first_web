@@ -4,10 +4,19 @@
 </template-->
 
 <template>
-  <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-  </div>
+  <header class="header-bar">
+    <div class="container" id="nav">
+      <h3>
+        <!--a href="/" class="router-link-exact-active router-link-active">Home</a>|
+        <a href="/about" class="router-link-exact-active router-link-active">About</a>|
+        <a href="/QRCodeGenerate" 
+        class="router-link-exact-active router-link-active">QR Code Generator</a-->
+        <router-link to="/" class="nav-link">Home</router-link> |
+        <router-link to="/about" class="nav-link">About</router-link>|
+        <router-link to="/QRCodeGenerate" class="nav-link">QR Code Generator</router-link>
+      </h3>
+    </div>
+  </header>
   <router-view />
 </template>
 
@@ -30,5 +39,27 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.container {
+  /*padding: 5%;*/
+  color: #fff;
+  padding-left: 5%;
+  padding-top: 1%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.nav-link {
+  color: white;
+  /* Additional styles */
+}
+.header-bar {
+  background-color: #333;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 </style>
